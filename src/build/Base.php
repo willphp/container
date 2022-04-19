@@ -8,7 +8,7 @@
  | Copyright (c) 2020-2022, www.113344.com. All Rights Reserved.
  |-------------------------------------------------------------------------*/
 namespace willphp\container\build;
-class Container implements \ArrayAccess {
+class Base implements \ArrayAccess {
 	public $bindings = []; //绑定实例
 	public $instances = []; //单例服务
 	/**
