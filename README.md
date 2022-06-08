@@ -1,16 +1,15 @@
-# IOC服务容器
+##IOC服务容器
+
 container组件用于IOC服务容器管理
 
-#开始使用
-
-####安装组件
+###安装组件
 使用 composer 命令进行安装或下载源代码使用。
 
     composer require willphp/container
 
-> WillPHP 框架已经内置此组件，无需再安装。
+> WillPHP框架已经内置此组件，无需再安装。
 
-####注入容器
+###注入容器
 
 定义一个测试类并绑定到容器：
 
@@ -22,7 +21,7 @@ container组件用于IOC服务容器管理
 	});
 	\willphp\container\Container::make('test')->show();
 
-####单例注入
+###单例注入
 
 使用instance：
 
@@ -36,15 +35,13 @@ container组件用于IOC服务容器管理
 	});
 	Container::make('test')->show();
 
-####调用方法
+###调用方法
 
 	echo Container::callMethod(Test::class, 'show');
 
-####调用函数
+###调用函数
 
 	$res = Container::callFunction(function (Test $test) {
 	     return $test->show();
 	});
-
-
  

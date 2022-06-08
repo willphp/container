@@ -3,17 +3,17 @@
  | Software: [WillPHP framework]
  | Site: www.113344.com
  |--------------------------------------------------------------------------
- | Author: no-mind <24203741@qq.com>
+ | Author: 无念  <24203741@qq.com>
  | WeChat: www113344
  | Copyright (c) 2020-2022, www.113344.com. All Rights Reserved.
  |-------------------------------------------------------------------------*/
 namespace willphp\container;
-use willphp\container\build\Base;
+use willphp\container\build\ContainerBuilder;
 class Container {
 	protected static $link = null;
 	public static function single()	{
 		if (!self::$link) {
-			self::$link = new Base();
+			self::$link = new ContainerBuilder();
 		}		
 		return self::$link;
 	}	
